@@ -1,20 +1,64 @@
-// Medical_Bill_Tracker.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Medical_Bill_Tracker.cpp 
 //
 
 #include <iostream>
 
+using namespace std;
+
+//void newBill(string issuer, int cost, bool insurancePaid, bool calledIn, int urgencyLevel, string description);
+
+class Bill {
+public:
+    string issuer;
+    int cost;
+    bool insurancePaid;
+    bool calledIn;
+    int urgencyLevel;
+    string description;
+
+    void printBill() {
+        cout << "Issuer: " << issuer << "\n";
+        cout << "Cost: $" << cost << "\n";
+        cout << "Has Insurance Paid?: " << insurancePaid << "\n";
+    }
+};
+
+/*each bill is a new object, has properties including :
+    - who it's for (string)
+    - how much (int)
+    - has insurance paid yet (bool)
+    - have I called it yet (bool)
+    - urgency level (int)
+    - description of what it's for*/
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    int userChoice;
+
+    cout << "Please select one of the following options: \n";
+    cout << "1. Add a new bill\n";
+    cout << "2. Print existing list of bills";
+    cin >> userChoice;
+
+    switch (userChoice) {
+    case 1:
+
+        break;
+    case 2:
+        break;
+    default:
+        break;
+    }
+
+    
+    Bill exampleBill;
+
+    exampleBill.issuer = "Franciscan Alliance";
+    exampleBill.cost = 77740;
+    exampleBill.insurancePaid = false;
+
+    exampleBill.printBill();
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
