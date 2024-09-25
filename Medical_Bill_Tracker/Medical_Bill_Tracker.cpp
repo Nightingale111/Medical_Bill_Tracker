@@ -20,6 +20,7 @@ public:
         cout << "Issuer: " << issuer << "\n";
         cout << "Cost: $" << cost << "\n";
         cout << "Has Insurance Paid?: " << insurancePaid << "\n";
+        cout << "Has the Issuer been called?: " << calledIn << "\n";
     }
 };
 
