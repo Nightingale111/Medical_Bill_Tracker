@@ -21,6 +21,7 @@ public:
         cout << "Cost: $" << cost << "\n";
         cout << "Has Insurance Paid?: " << insurancePaid << "\n";
         cout << "Has the Issuer been called?: " << calledIn << "\n";
+        cout << "Urgency Level: " << urgencyLevel << "\n";
     }
 };
 
